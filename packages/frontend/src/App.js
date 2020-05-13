@@ -22,8 +22,8 @@ function App() {
         </a>
       </header>
 
-      <AyahList />
-      <SurahList />
+      <AyahList surahNumber={107} />
+      {/* <SurahList /> */}
     </div>
   );
 }

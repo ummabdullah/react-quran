@@ -4,27 +4,38 @@ export class AyahList extends Component {
   static displayName = AyahList.name;
 
   constructor(props) {
+    //load surah names
     super(props);
-    this.state = { currentCount: 0 };
-    this.incrementCounter = this.incrementCounter.bind(this);
-  }
+    this.state = { number: props.surahNumber };
+    const url = "http://api.alquran.cloud/v1/surah/" + props.surahNumber ;
 
-  incrementCounter() {
-    this.setState({
-      currentCount: this.state.currentCount + 1
+
+    fetch(url)
+    .then((response) => {
+     return response.json();
+    })
+    .then((json) => {
+        console.log("HI: " + JSON.stringify(json.data.ayahs))
+      this.setState({
+        ayahs: json.data.ayahs
+      });
+
     });
   }
 
   render() {
+    if (typeof(this.state.ayahs) == typeof('undefined') || this.state.ayahs == null)
+    {
+      return null;
+    }
+
+    var ayahs = this.state.ayahs.map((ayah, key) => 
+      <li key={ayah.number}>{ayah.numberInSurah} {ayah.text}</li>
+    );
+
     return (
       <div>
-        <h1>Counter</h1>
-
-        <p>This is a simple example of a React component.</p>
-
-        <p aria-live="polite">Current count: <strong>{this.state.currentCount}</strong></p>
-
-        <button className="btn btn-primary" onClick={this.incrementCounter}>Increment</button>
+        {ayahs}
       </div>
     );
   }
