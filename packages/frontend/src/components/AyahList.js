@@ -6,13 +6,12 @@ export class AyahList extends Component {
   constructor(props) {
     //load surah names
     super(props);
-    this.state = { number: props.surahNumber };
-    const url = "http://api.alquran.cloud/v1/surah/" + props.surahNumber;
-
+    this.state = { surahNumber: props.match.params.surahNumber };
+    const url = "http://api.alquran.cloud/v1/surah/" + this.state.surahNumber;
 
     fetch(url)
     .then((response) => {
-     return response.json();
+      return response.json();
     })
     .then((json) => {
       this.setState({

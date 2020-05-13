@@ -3,13 +3,13 @@ import logo from './logo.svg';
 import './App.css';
 import { AyahList } from './components/AyahList';
 import { SurahList } from './components/SurahList';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
 
-    <Router>
+    <BrowserRouter>
         <main>
           <nav>
             <ul>
@@ -18,11 +18,11 @@ function App() {
             </ul>
           </nav>
 
-      <Route path="/" render={() => <h1>Welcome!</h1>} />
-      <Route path="/surah" component={SurahList} />
-      <Route path="/ayah" component={AyahList} />
+          <Route path="/" render={() => <h1>Welcome!</h1>} />
+          <Route path="/surah" component={SurahList} />
+          <Route path="/ayah/:surahNumber" component={AyahList} />
         </main>
-    </Router>
+    </BrowserRouter>
 
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export class SurahList extends Component {
   static displayName = SurahList.name;
@@ -29,7 +30,7 @@ export class SurahList extends Component {
     }
 
     var surahs = this.state.surahs.map((surah, key) => 
-      <a href={"/ayah/" + surah.number}><li key={surah.number}>{surah.number} {surah.name}</li></a>
+      <Link to={"/ayah/" + surah.number}><li key={surah.number}>{surah.number} {surah.name}</li></Link>
     );
 
     return (
