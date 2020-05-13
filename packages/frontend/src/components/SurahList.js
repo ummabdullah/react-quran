@@ -27,9 +27,14 @@ export class SurahList extends Component {
     {
       return null;
     }
+
+    var surahs = this.state.surahs.map((surah, key) => 
+      <li key={surah.number}>{surah.number} {surah.name}</li>
+    );
+
     return (
       <div>
-        {this.state.surahs[0].name}
+        {surahs}
       </div>
     );
   }
