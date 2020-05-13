@@ -29,12 +29,14 @@ export class SurahList extends Component {
     }
 
     var surahs = this.state.surahs.map((surah, key) => 
-      <li key={surah.number}>{surah.number} {surah.name}</li>
+      <a href={"/ayah/" + surah.number}><li key={surah.number}>{surah.number} {surah.name}</li></a>
     );
 
     return (
       <div>
+        <ul>
         {surahs}
+        </ul>
       </div>
     );
   }

@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/ummabdullah/react-quran/issues"
   },
-  "homepage": "https://github.com/ummabdullah/react-quran#readme"
+  "homepage": "https://github.com/ummabdullah/react-quran#readme",
+  "dependencies": {
+    "react-router-dom": "^5.2.0"
+  }
 }

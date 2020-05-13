@@ -7,7 +7,7 @@ export class AyahList extends Component {
     //load surah names
     super(props);
     this.state = { number: props.surahNumber };
-    const url = "http://api.alquran.cloud/v1/surah/" + props.surahNumber ;
+    const url = "http://api.alquran.cloud/v1/surah/" + props.surahNumber;
 
 
     fetch(url)
@@ -15,7 +15,6 @@ export class AyahList extends Component {
      return response.json();
     })
     .then((json) => {
-        console.log("HI: " + JSON.stringify(json.data.ayahs))
       this.setState({
         ayahs: json.data.ayahs
       });
@@ -35,6 +34,7 @@ export class AyahList extends Component {
 
     return (
       <div>
+        <h1>Surah #{this.state.number}</h1>
         {ayahs}
       </div>
     );
