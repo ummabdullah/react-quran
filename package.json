@@ -1,0 +1,22 @@
+{
+  "name": "react-quran",
+  "version": "1.0.0",
+  "description": "Qur'an browser",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ummabdullah/react-quran.git"
+  },
+  "keywords": [
+    "quran"
+  ],
+  "author": "UmmAbdullah",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ummabdullah/react-quran/issues"
+  },
+  "homepage": "https://github.com/ummabdullah/react-quran#readme"
+}
