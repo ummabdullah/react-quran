@@ -1,3 +1,5 @@
 # React Qur'an
 
-Front-end react app with existing Quran APIs
+Front-end Qur'an app that uses existing APIs.
+
+Made with ReactJS.
