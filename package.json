@@ -21,5 +21,11 @@
   "homepage": "https://github.com/ummabdullah/react-quran#readme",
   "dependencies": {
     "react-router-dom": "^5.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
+    "babel-loader": "^8.1.0"
   }
 }
